@@ -1,7 +1,8 @@
 name: gokil
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "Create theme for flutter app"
+version: 1.0.0
+repository: https://github.com/ekasetiawans/gokil.git
+homepage: https://maseka.dev
 
 environment:
   sdk: ">=3.2.2 <4.0.0"
