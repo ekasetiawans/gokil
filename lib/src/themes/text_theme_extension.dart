@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 TextTheme createTextThemeWithFontFamily({
-  required String fontFamily,
+  String? fontFamily,
   required Color color,
   List<String> fallbacks = const [],
 }) {

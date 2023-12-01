@@ -46,13 +46,20 @@ class Gokil extends StatefulWidget {
 
   @override
   State<Gokil> createState() => _GokilState();
+
+  static void setTheme(BuildContext context, ThemeMode themeMode) {
+    final controller =
+        context.findAncestorStateOfType<_GokilState>()!.controller;
+    controller.mode = themeMode;
+  }
 }
 
 class _GokilState extends State<Gokil> {
+  late ThemeController controller = widget.controller;
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: widget.controller,
+      animation: controller,
       builder: (context, child) {
         return widget.builder(
           widget.controller._lightTheme,
@@ -61,5 +68,10 @@ class _GokilState extends State<Gokil> {
         );
       },
     );
+  }
+
+  didUpdateWidget(Gokil oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    controller = widget.controller;
   }
 }

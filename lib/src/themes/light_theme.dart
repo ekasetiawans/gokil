@@ -6,7 +6,7 @@ import 'text_theme_extension.dart';
 ThemeData createLightTheme({
   required Color primary,
   required Color secondary,
-  required String fontFamily,
+  String? fontFamily,
   List<String> fontFamilyFallbacks = const [],
 }) {
   var theme = ThemeData.from(

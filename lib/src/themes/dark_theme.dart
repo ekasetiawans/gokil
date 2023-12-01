@@ -6,7 +6,7 @@ import 'text_theme_extension.dart';
 ThemeData createDarkTheme({
   required Color primary,
   required Color secondary,
-  required String fontFamily,
+  String? fontFamily,
   List<String> fontFamilyFallbacks = const [],
 }) {
   var theme = ThemeData.from(
@@ -16,7 +16,7 @@ ThemeData createDarkTheme({
       seedColor: primary,
       primary: primary,
       secondary: secondary,
-      onPrimary: primary.computeLuminance() > 0.5
+      onPrimary: primary.computeLuminance() > 0.8
           ? const Color(0xFF121212)
           : const Color(0xFFC8C8C8),
       surface: const Color(0xFF1c1c1c),
